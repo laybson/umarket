@@ -1,3 +1,6 @@
+/**
+ * User action to log.
+ */
 module.exports = class LogAction {
     static Create = new LogAction('create')
     static Update = new LogAction('update')

@@ -1,5 +1,8 @@
 const Filter = require('../enums/filter');
 
+/**
+ * Info to create a new Market mock.
+ */
 const createInfo = {
     long: 62185661,
     lat: 52479807,
@@ -19,6 +22,9 @@ const createInfo = {
     referencia: 'Parque PB2'
 }
 
+/**
+ * Info to update a new Market mock.
+ */
 const updateInfo = {
     registro: '<(**<)',
     info: {
@@ -40,16 +46,27 @@ const updateInfo = {
     }
 }
 
+/**
+ * A valid market object.
+ */
 const validMarket = { id: 32, ...createInfo }
 
+/**
+ * Another valid market object.
+ */
 const auxValidMarket = { id: 32, registro: updateInfo.registro, ...updateInfo.info }
 
+/**
+ * Creates an array of markets with the given label for each available filter.
+ * @param {string} label - The label to assign to each market.
+ * @returns {Array} An array of markets, each containing the label and a specific filter value.
+ */
 const multiMarkets = label => {
     const markets = Object.keys(Filter).map((filter, i) => {
         const info = createInfo;
         const market = {...info};
         market[filter.toLowerCase()] = label;
-        market.distrito = filter;
+        market.registro = filter;
         market.id = i;
         return market;
     })

@@ -1,3 +1,6 @@
+/**
+ * Excecution status to log.
+ */
 module.exports = class LogStatus {
     static Success = new LogStatus('success')
     static Error = new LogStatus('error')

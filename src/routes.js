@@ -4,6 +4,7 @@ const router = Router();
 const Filter = require('./components/enums/filter');
 const MarketAPI = require('./api/MarketAPI');
 
+// Create a string of URL parameters to use for filters
 const filters = Object.values(Filter).map(filter => `/:${filter.name}?`).join('');
 
 router.get(`/umarkets/:label?${filters}`, MarketAPI.getMarkets);

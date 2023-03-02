@@ -1,3 +1,6 @@
+/**
+ * Filter that can be applied to search a Market.
+ */
 module.exports = class Filter {
     static DISTRITO = new Filter('distrito')
     static REGIAO5 = new Filter('regiao5')
