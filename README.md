@@ -49,6 +49,7 @@ Se achar mais cômodo, não passe nenhum parâmetro para manter a configuração
 
 Após isso, a aplicação já estará pronta para ser testada. Podendo ser executada no diretório raiz do projeto com 
 ```sh
+npm install
 node ./server.js
 ```
 
