@@ -129,3 +129,12 @@ Atalizará a feira de registro `7052-1`.
 Apaga a feira com o registro passado no param.
 - http://localhost:3000/api/v1/umarket/del/7052-1
 Apagará a feira de registro `7052-1`.
+
+
+### Logs e Testes
+Podemos rodar os testes, e observar sua cobertura, na raiz do projeto com:
+```sh
+npm test
+```
+
+E todas as ações nos referidos endpoints geram logs armazenados no diretório `/logs`
